@@ -1,0 +1,104 @@
+/* Instagram Video Seek Bar Styles */
+.ig-seek-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+}
+
+/* Show on hover */
+div:hover > .ig-seek-container,
+.ig-seek-container:hover,
+.ig-seek-container:focus-within {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ig-seek-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.ig-seek-bar::-webkit-slider-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.ig-seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.ig-seek-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+}
+
+.ig-seek-bar::-moz-range-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    border: none;
+}
+
+.ig-seek-bar::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ig-time-display {
+    color: #ffffff;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    min-width: 75px;
+    text-align: right;
+}
+
+/* Better visibility */
+@media (max-width: 768px) {
+    .ig-seek-container {
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+        padding: 6px 10px;
+        gap: 10px;
+    }
+    
+    .ig-time-display {
+        font-size: 10px;
+        min-width: 65px;
+    }
+}

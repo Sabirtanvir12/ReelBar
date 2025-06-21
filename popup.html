@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelBar - Instagram Video Controls</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 320px;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f0f13;
+            color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #FF9A8B 0%, #FF6B95 50%, #FF8E53 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 13px;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .activation-card {
+            background: linear-gradient(135deg, rgba(40, 42, 55, 0.8) 0%, rgba(30, 32, 45, 0) 100%);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .status {
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .status.enabled {
+            color: #6EFF85;
+        }
+
+        .status.disabled {
+            color: #FF6B6B;
+        }
+
+        .info {
+            background: linear-gradient(135deg, rgba(40, 42, 55, 0.8) 0%, rgba(30, 32, 45, 0.9) 100%);
+            border-radius: 14px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .info h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: #D6D6FF;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            padding: 8px 0;
+            font-size: 13px;
+            opacity: 0.9;
+            position: relative;
+            padding-left: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #6E45E2;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 11px;
+            opacity: 0.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(110, 69, 226, 0.2);
+            color: #B89EFF;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .reel {
+            font-weight: 600;
+            color: #0fa027;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ReelBar</h1>
+        <p>Professional Video Controls for Instagram</p>
+    </div>
+
+    <div class="activation-card">
+            <div class="reel">ReelBar Activated</div>
+        <div class="status" id="status">Ready to enhance your Instagram experience</div>
+    </div>
+
+    <div class="info">
+        <h3>Features</h3>
+        <ul class="features">
+            <li>Seek through Instagram Reels & Videos</li>
+            <li>Frame-accurate video scrubbing</li>
+            <li>Works with all Instagram video formats</li>
+            <li>Optimized for performance</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Hover over videos to reveal advanced controls</p>
+    </div>
+</body>
+</html>
